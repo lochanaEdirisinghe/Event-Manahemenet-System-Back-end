@@ -11,16 +11,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(	name = "employees")
+@Table(	name = "employee")
 public class Employee {
     @Id
-    @Column(length = 45)
+    @Column(name= "emp_id",length = 45)
     private String empId;
-    @Column(length = 20)
+    @Column(length = 20, name = "first_name")
     private String firstName;
-    @Column(length = 20)
+    @Column(length = 20, name = "last_name")
     private String lastName;
-    @Column(length = 45, nullable = false, unique = true)
+    @Column(length = 45, name = "reg_code",nullable = false, unique = true)
     private String regCode;
     @Column(length = 45, nullable = false, unique = true)
     private String password;
@@ -48,7 +48,4 @@ public class Employee {
     @JoinColumn(name = "team", referencedColumnName = "team_id", nullable = false)
     private Team team;
 
-    /*@ManyToOne(cascade = {CascadeType.PERSIST})
-    @JoinColumn(name = "team", referencedColumnName = "team_id", nullable = false)
-    private Team team;*/
 }

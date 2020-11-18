@@ -27,6 +27,5 @@ public class EmployeeController {
     public void saveEmp( @RequestBody EmpDto dto) throws IOException {
         employeeService.saveEmp(dto);
     }
-    /*@RequestParam("photo") MultipartFile photo,*/
 
 }

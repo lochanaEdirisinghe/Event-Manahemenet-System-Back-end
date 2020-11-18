@@ -18,5 +18,4 @@ public class Position {
     private String positionId;
     @Column(name = "name", nullable = false, length = 25)
     private String name;
-    private String description;
 }

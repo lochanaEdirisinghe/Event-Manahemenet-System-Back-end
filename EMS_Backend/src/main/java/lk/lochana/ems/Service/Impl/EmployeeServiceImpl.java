@@ -28,10 +28,10 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public void saveEmp(EmpDto dto) throws IOException {
-        //file.transferTo(new File("F:\\ABSD\\Spring\\EventManagement System\\EMS_Backend\\src\\main\\java\\lk\\lochana\\ems\\Profphotos"+file.getOriginalFilename()));
+        /*//file.transferTo(new File("F:\\ABSD\\Spring\\EventManagement System\\EMS_Backend\\src\\main\\java\\lk\\lochana\\ems\\Profphotos"+file.getOriginalFilename()));
         Optional<Role> role = roleRepository.findById(1);
         Employee employee = modelMapper.map(dto, Employee.class);
         employee.setRole(role.get());
-        employeeRepo.save(employee);
+        employeeRepo.save(employee);*/
     }
 }

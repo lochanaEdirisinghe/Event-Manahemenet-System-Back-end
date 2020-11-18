@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,7 +23,7 @@ public class Employee {
     private String lastName;
     @Column(length = 45, name = "reg_code",nullable = false, unique = true)
     private String regCode;
-    @Column(length = 45, nullable = false, unique = true)
+    @Column(length = 100, nullable = false, unique = true)
     private String password;
     @Column(length = 10)
     private int contact;
@@ -35,9 +36,10 @@ public class Employee {
     @Temporal(TemporalType.DATE)
     private Date dob;
     private String photo;
-    @ManyToOne(cascade = {CascadeType.PERSIST})
-    @JoinColumn(name = "role", referencedColumnName = "id", nullable = false)
-    private Role role;
+    @JoinTable(name = "emp_roles", joinColumns = @JoinColumn(name = "emp_id", referencedColumnName = "emp_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    private List<Role> roles;
     @ManyToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(name = "position", referencedColumnName = "position_id", nullable = false)
     private Position position;

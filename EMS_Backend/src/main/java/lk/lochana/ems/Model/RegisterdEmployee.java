@@ -1,4 +1,4 @@
-package lk.lochana.ems.Entity;
+package lk.lochana.ems.Model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -11,6 +11,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, String> {
 
         /*@Query(value = "select * from Employee where username =:name", nativeQuery = true)
         Optional<Employee> findByUsername(@Param("name") String name);*/
-
         Optional<Employee> findByUsername(String name);
 }

@@ -71,7 +71,7 @@ public class Employee implements UserDetails, Serializable {
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override
@@ -91,6 +91,6 @@ public class Employee implements UserDetails, Serializable {
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return true;
     }
 }

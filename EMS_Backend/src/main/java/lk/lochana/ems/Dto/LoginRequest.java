@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Data
 @NoArgsConstructor
 @Component
-public class UsernameAndPasswordAuthReq {
+public class LoginRequest {
 
     private String username;
     private String password;
